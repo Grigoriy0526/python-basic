@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status
 
-from views.users.crud import storage
-from views.users.schemas import UserCreate, UserOut, User
+from .crud import storage
+from .schemas import UserCreate, UserOut, User
 
 router = APIRouter(
     prefix="/users",

@@ -8,7 +8,7 @@ Delete
 """
 from pydantic import BaseModel
 
-from views.users.schemas import User, UserCreate
+from .schemas import User, UserCreate
 
 
 class Storage(BaseModel):
