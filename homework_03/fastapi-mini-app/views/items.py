@@ -22,9 +22,7 @@ def get_items_list():
 
 @router.get("/{item_id}")
 def get_item(
-    # item_id: int = Path(lt=1_000_000, ge=1),
     item_id: Annotated[int, Path(lt=1_000_000, ge=1)],
-    # item_id: Annotated[int, Ge(1), Lt(1_000_000)],
 ):
     return {
         "data": {
@@ -41,9 +39,6 @@ class ItemCreate(BaseModel):
 
 @router.post("")
 def create_item(
-    # data: Annotated[dict, Body()],
-    # name: Annotated[str, Body(embed=True)],
-    # description: Annotated[str, Body(embed=True)],
     item: ItemCreate,
 ):
     return {
